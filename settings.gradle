@@ -1,0 +1,5 @@
+rootProject.name = 'esito'
+include 'core'
+include 'test'
+include 'retrofit'
+include 'async'

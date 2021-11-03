@@ -1,0 +1,54 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.31'
+}
+
+version '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+subprojects {
+    apply plugin: "org.jetbrains.kotlin.jvm"
+    apply plugin: "java"
+    apply plugin: "maven-publish"
+
+    repositories {
+        mavenCentral()
+    }
+
+    version = rootProject.version
+
+    kotlin {
+        compileKotlin {
+            kotlinOptions {
+                jvmTarget = "1.8"
+            }
+        }
+        jvmToolchain {
+            languageVersion.set(JavaLanguageVersion.of(8))
+        }
+    }
+
+    java {
+        withJavadocJar()
+        withSourcesJar()
+    }
+
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                groupId "com.github.Subito-it.Esito"
+                artifactId project.getName()
+                version = rootProject.version
+                from components.java
+            }
+        }
+    }
+}
