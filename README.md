@@ -1,4 +1,9 @@
-# Esito
+# Esito - Deprecated
+
+## ⛔️ DEPRECATED
+
+We have chosen to stop support and improvements on Esito since we internally migrated to [Arrow](https://arrow-kt.io/). When Esito was created (at the beginning of 2021), Arrow was still in progress and was not stable at all ([version 1.0.0](https://github.com/arrow-kt/arrow/releases/tag/1.0.0) was released in September 2021). Basically, using Arrow, you can achieve the same results and also explore functional programming more, if you like!
+
 
 [![](https://jitpack.io/v/Subito-it/Esito.svg)](https://jitpack.io/#Subito-it/Esito)
 
